@@ -1,0 +1,21 @@
+{
+    "name": "aq-terminal",
+    "version": "1.0.0",
+    "crypto": {
+        "key": "pQnbVtFsAnMss6vkMFt6a5GYXG7fCXDaYeZUbVf3DVjQ4fgcLxnrhjbhVj9P66KHezymVXuwkjwaSg3TMxxv9Dp7Bn9yVt7JLvEPqGsSS2tCv2cF8J2pmBG93GXMRnmSsC7V2dwmRKYj34XRDHrvnZsfEKfUeU3sr45h83wZGdzbMSdsU6mwV5KYjueyhhbZ74HzpJy2Ac8RBfnjgTPaBqFEq6gbMkfBzKYp6t7UhT86XVyqGnWadvzM6PpYyCdZecvjw6tFvrkMrx38BaC2pEsZLEdyLKPb7DyrfUJXrGZjF5KpxuDTAQPgreQUcV4K6mUR6VRf9Bc8GW7bKCCNRBVrYpparmpUcuKa4K8fHWsJF797K4Tu6syuCnyUUwgGDJKSDbvzGyEjLAdsd9rxnZgUquVd29HaVXvUbhTJmLDvrQs5ZUXgnDbLhHHCJGxWWeLBvaq4cZzPXSQRRFLcCNMb8PHBjRSBMyPLWGVPS2NhMkSqjwvvGXbM9crFPtfz",
+        "keyHash": "73C5E076D59F8E41A4CF5F07A2D7AB5D"
+    },
+    "build": {
+        "date": 1652368589052,
+        "number": 31
+    },
+    "server": {
+        "defaultGateway": "wss://localhost:2222",
+        "protocolVersion": "AQT1EX"
+    },
+    "terminal": {
+        "serial": "C050F7AF31922304A55202D0FE3607DF"
+    },
+    "main": "webpack.config.js",
+    "description": "Aquarius Terminal"
+}

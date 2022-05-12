@@ -1,0 +1,148 @@
+@import './../../global.scss';
+.terminal {
+    opacity: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    background: linear-gradient(0deg, rgb(8, 6, 6) 0%, rgba(41, 41, 41, 1) 100%);
+    box-shadow: 0px 0px 100px 7px inset black;
+
+    overflow: hidden;
+    .log {
+    }
+    .input {
+        display: flex;
+
+        .prefix {
+            white-space: pre-wrap;
+        }
+        .command {
+            padding: 0px;
+            margin: 0px;
+            font: inherit;
+            color: inherit;
+            background: none;
+            border: none;
+            outline: none;
+            text-shadow: inherit;
+            caret-color: transparent;
+            &::spelling-error {
+            }
+        }
+
+        .caret {
+            margin-left: 3px;
+            height: 16px;
+            width: 8px;
+            background-color: $base-color;
+            box-shadow: 0px 0px 10px $glow-color;
+        }
+    }
+}
+
+.anim-screen-on {
+    animation-name: kf-anim-screen-on;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(1, 0);
+    @keyframes kf-anim-screen-on {
+        0% {
+            opacity: 0;
+            transform: scaleY(0);
+        }
+        80% {
+            transform: scaleY(1.1);
+        }
+        90% {
+            transform: scaleY(0.95);
+        }
+        100% {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+    }
+}
+
+.anim-screen-off {
+    animation-name: kf-anim-screen-off;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+    animation-timing-function: cubic-bezier(1, 0);
+    @keyframes kf-anim-screen-off {
+        0% {
+            opacity: 0;
+            transform: scaleY(0);
+        }
+        80% {
+            transform: scaleY(1.1);
+        }
+        90% {
+            transform: scaleY(0.95);
+        }
+        100% {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+    }
+}
+
+.blinker {
+    animation-name: kf-blink;
+    animation-duration: 1.3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    @keyframes kf-blink {
+        0% {
+            opacity: 0;
+        }
+        1% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 1;
+        }
+        51% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+}
+
+.screen-overlay {
+    left: 0px;
+    top: 0px;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    @extend .screen-blink;
+    opacity: 0.06;
+    pointer-events: none;
+    mix-blend-mode: lighten;
+
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEU\
+  gAAAGQAAABkAQMAAABKLAcXAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACx\
+  MBAJqcGAAAAAZQTFRF////AAAAVcLTfgAAAB1JREFUeJxjYEAB/5HAB4ZRuVG5\
+  UblRuVE5qssBAEFzhKfD/lujAAAAAElFTkSuQmCC');
+}
+
+.screen-blink {
+    animation-name: kf-screen-blink;
+    animation-duration: 30ms;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    @keyframes kf-screen-blink {
+        0% {
+            opacity: 0.03;
+        }
+        100% {
+            opacity: 0.04;
+        }
+    }
+}

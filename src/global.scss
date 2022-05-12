@@ -1,0 +1,7 @@
+$leds_green:  #4ec343;
+$leds_blue:  #437fc3;
+$leds_purple:  #a600ff;
+
+$base-color: $leds_green;
+
+$glow-color: darken($base-color,10);
